@@ -23,13 +23,13 @@
 #}
 
 dav.annemarie-schwarzenbach.ch {
-	reverse_proxy 10.100.5.45:80  # resides on the same environment/layer as reverse proxy; could also point to an other environment
+	reverse_proxy 10.100.25.149:80  # resides on the same environment/layer as reverse proxy; could also point to an other environment
 }
 
 # for testing purposes:
-dav.annemarie-schwarzenbach.ch:86 {
-	reverse_proxy 10.100.29.101:80
-}
+#dav.annemarie-schwarzenbach.ch:86 {
+#	reverse_proxy 10.100.29.101:80
+#}
 
 # Refer to the Caddy docs for more information:
 # https://caddyserver.com/docs/caddyfile
