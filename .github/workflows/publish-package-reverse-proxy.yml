@@ -1,4 +1,4 @@
-name: Publish dseas-reverseproxy image
+name: Publish dseas-reverseproxy Docker image
 
 on:
   push:
