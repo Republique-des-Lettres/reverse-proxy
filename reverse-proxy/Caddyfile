@@ -22,7 +22,7 @@
 	# php_fastcgi localhost:9000
 #}
 
-dav.annemarie-schwarzenbach.ch {
+dav.annemarie-schwarzenbach.ch, reverse-proxy.jcloud.ik-server.com {
 	reverse_proxy 10.100.25.149:80  # resides on the same environment/layer as reverse proxy; could also point to an other environment
 }
 
