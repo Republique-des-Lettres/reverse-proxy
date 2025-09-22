@@ -60,9 +60,13 @@ hallernet.org, www.hallernet.org {
 }
 
 # for testing purposes:
-#foo.republique-des-lettres.ch:86 {
-#	reverse_proxy 10.102.6.166:80
-#}
+foo.republique-des-lettres.ch:86 {
+	reverse_proxy 10.102.6.166:80
+}
+
+rdl.hallernet.org {
+    redir https://republique-des-lettres.ch{uri} 301
+}
 
 # Refer to the Caddy docs for more information:
 # https://caddyserver.com/docs/caddyfile

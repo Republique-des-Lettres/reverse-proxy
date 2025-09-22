@@ -5,4 +5,3 @@ This repository contains information on server applications and provides them as
 ## Contents
 
 - reverse proxy
-- WebDAV server
