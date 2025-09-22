@@ -31,4 +31,4 @@ jobs:
           context: ./reverse-proxy
           push: true
           tags: |
-            ghcr.io/${{ github.repository_owner }}/rdl-reverseproxy:latest
+            ghcr.io/republique-des-lettres/rdl-reverseproxy:latest
