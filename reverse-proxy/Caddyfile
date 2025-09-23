@@ -64,6 +64,11 @@ stats.republique-des-lettres.ch {
     import security_headers
 }
 
+md.republique-des-lettres.ch {
+    reverse_proxy 10.101.3.155:80
+    import security_headers
+}
+
 # for testing purposes:
 foo.republique-des-lettres.ch {
 	reverse_proxy 10.102.6.166:80
