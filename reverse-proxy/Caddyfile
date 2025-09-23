@@ -65,7 +65,7 @@ stats.republique-des-lettres.ch {
 }
 
 md.republique-des-lettres.ch {
-    reverse_proxy 10.101.3.155:80
+    reverse_proxy 10.101.5.230:80
     import security_headers
 }
 
