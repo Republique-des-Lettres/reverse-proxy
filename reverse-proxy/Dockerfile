@@ -8,5 +8,7 @@ COPY Caddyfile /etc/caddy/Caddyfile
 EXPOSE 80
 EXPOSE 443
 
+# Set an alternative CA (temporarily to bypass LE limitations)
+ENV CADDY_ACME_CA="https://api.buypass.com/acme/directory"
 # Set the entry point for the container to start Caddy
 ENTRYPOINT ["caddy", "run", "--config", "/etc/caddy/Caddyfile", "--adapter", "caddyfile"]
