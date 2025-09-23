@@ -42,7 +42,7 @@
 
 (security_headers) {
     header {
-        Strict-Transport-Security "max-age=31536000; includeSubDomains"
+        # Strict-Transport-Security "max-age=31536000; includeSubDomains"
         X-Frame-Options "SAMEORIGIN"
         X-Content-Type-Options "nosniff"
         X-XSS-Protection "1; mode=block"
@@ -60,7 +60,7 @@ hallernet.org, www.hallernet.org {
 }
 
 # for testing purposes:
-foo.republique-des-lettres.ch:86 {
+foo.republique-des-lettres.ch {
 	reverse_proxy 10.102.6.166:80
 }
 
