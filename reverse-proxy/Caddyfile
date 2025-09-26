@@ -16,6 +16,8 @@
 #                                                                     #
 # Also remember to observe the Let's Encrypt rate limits:             #
 # https://letsencrypt.org/docs/rate-limits                            #
+# Limits are more generous in the staging environment.                #
+# ACME endpoints/providers may be changed in the tls snippet at L48.  #
 # --------------------------------------------------------------------#
 
 
@@ -43,6 +45,14 @@
 	# php_fastcgi localhost:9000
 #}
 
+(tls) {
+    tls tech@republique-des-lettres.ch {
+#        ca https://acme-staging-v02.api.letsencrypt.org/directory
+#        ca https://acme-v02.api.letsencrypt.org/directory
+        ca https://acme.zerossl.com/v2/DV90
+    }
+}
+
 (security_headers) {
     header {
         # Strict-Transport-Security "max-age=31536000; includeSubDomains"
@@ -54,29 +64,35 @@
 }
 
 republique-des-lettres.ch, www.republique-des-lettres.ch {
+    import tls
     reverse_proxy 10.102.6.166:80
     import security_headers
 }
 
 hallernet.org, www.hallernet.org {
+	import tls
     redir https://republique-des-lettres.ch{uri} 301
 }
 
 md.republique-des-lettres.ch {
+    import tls
     reverse_proxy 10.101.5.230:80
     import security_headers
 }
 
 md.hallernet.org {
+    import tls
     redir https://md.republique-des-lettres.ch{uri} 301
 }
 
 stats.republique-des-lettres.ch {
+    import tls
     reverse_proxy 10.101.5.58:80
     import security_headers
 }
 
 stats.hallernet.org {
+    import tls
     redir https://stats.republique-des-lettres.ch{uri} 301
 }
 
