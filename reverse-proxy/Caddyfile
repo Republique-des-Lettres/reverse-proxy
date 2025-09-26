@@ -13,6 +13,9 @@
 # reload Caddy gracefully to minimise downtime:                       #
 #                                                                     #
 # caddy reload --config /etc/caddy/Caddyfile --adapter caddyfile      #
+#                                                                     #
+# Also remember to observe the Let's Encrypt rate limits:             #
+# https://letsencrypt.org/docs/rate-limits                            #
 # --------------------------------------------------------------------#
 
 
@@ -70,13 +73,13 @@ md.republique-des-lettres.ch {
 }
 
 # for testing purposes:
-foo.republique-des-lettres.ch {
-	reverse_proxy 10.102.6.166:80
-}
+#foo.republique-des-lettres.ch {
+#	reverse_proxy 10.102.6.166:80
+#}
 
-rdl.hallernet.org {
-    redir https://republique-des-lettres.ch{uri} 301
-}
+#rdl.hallernet.org {
+#    redir https://republique-des-lettres.ch{uri} 301
+#}
 
 # Refer to the Caddy docs for more information:
 # https://caddyserver.com/docs/caddyfile
