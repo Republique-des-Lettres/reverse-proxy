@@ -62,14 +62,22 @@ hallernet.org, www.hallernet.org {
     redir https://republique-des-lettres.ch{uri} 301
 }
 
+md.republique-des-lettres.ch {
+    reverse_proxy 10.101.5.230:80
+    import security_headers
+}
+
+md.hallernet.org {
+    redir https://md.republique-des-lettres.ch{uri} 301
+}
+
 stats.republique-des-lettres.ch {
     reverse_proxy 10.101.5.58:80
     import security_headers
 }
 
-md.republique-des-lettres.ch {
-    reverse_proxy 10.101.5.230:80
-    import security_headers
+stats.hallernet.org {
+    redir https://stats.republique-des-lettres.ch{uri} 301
 }
 
 # for testing purposes:
