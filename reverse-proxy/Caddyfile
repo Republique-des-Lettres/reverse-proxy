@@ -76,7 +76,7 @@ hallernet.org, www.hallernet.org {
 
 md.republique-des-lettres.ch {
     import tls
-    reverse_proxy 10.101.5.230:80
+    reverse_proxy 10.101.7.208:80
     import security_headers
 }
 
