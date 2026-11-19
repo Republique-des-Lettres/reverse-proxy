@@ -65,7 +65,7 @@
 
 republique-des-lettres.ch, www.republique-des-lettres.ch {
     import tls
-    reverse_proxy 10.102.6.166:80
+    reverse_proxy 10.101.8.14:80
     import security_headers
 }
 
